@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<title>VANILLA JS</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="icon" type="image/png" href="img/icon.png">
+</head>
+
+<body>
+	<section class="popup-bg popup-hidden" id="popup">
+		<div class="popup-box">
+			<div class="popup-header">
+				<h2>Add New</h2>
+			</div>
+			<form class="popup-form" method="post">
+				<input type="hidden" name="id" id="id" value="">
+				<fieldset>
+					<label for="nome">Nome <sup>*</sup></label>
+					<input type="text" placeholder="Leo Jaimesson" name="nome" id="nome" required>
+				</fieldset>
+
+				<fieldset>
+					<label for="email">Email <sup>*</sup></label>
+					<input type="email" placeholder="leo.jaimesson@gmail.com" name="email" id="email" required>
+				</fieldset>
+
+				<fieldset class="width50p">
+					<label for="idade">Idade</label>
+					<input type="number" min="1" max="130" placeholder="21" name="idade" id="idade">
+				</fieldset>
+
+				<fieldset class="width50p">
+					<label for="genero">Gênero</label>
+
+					<select>
+					  <option value="m">Masculino</option>
+					  <option value="f">Feminino</option>
+					  <option value="">Não Divulgue</option>
+					</select>
+				</fieldset>
+
+				<fieldset class="text-align-r">
+					<button class="btn btn-delete" id="btn-close">Cancelar</button>
+					<button type="submit" class="btn btn-new">Add</button>
+				</fieldset>
+			</form>
+		</div>
+	</section>
+
+	<header class="app-header">
+		<img src="img/js-logo.png" alt="logo">
+		<h1>Vanilla JS - CRUD</h1>
+	</header>
+
+	<section class="content-bg">
+		<div class="app-content">
+			<button class="btn btn-new" id="btn-open">Add new</button>
+			<label for="uploadFile" class="btn-upload">File upload csv</label>
+			<input id="uploadFile" type="file" onchange="loadUpload(this)"> 
+			
+			<table>
+				<thead>
+					<tr>
+						<th class="flex-3">Nome</th>
+						<th class="flex-4">Email</th>
+						<th class="flex-1">Idade</th>
+						<th class="flex-1">Gênero</th>
+						<th class="flex-2">Ações</th>
+					</tr>
+
+				</thead>
+				<tbody id="tbody-content">
+				</tbody>
+			</table>
+		</div>
+	</section>
+
+	<script src="js/app.js"></script>
+</body>
+
+</html>

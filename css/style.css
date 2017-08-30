@@ -1,0 +1,210 @@
+html, body, h1, h2, p, fieldset, label {
+	padding: 0px;
+	margin: 0px
+}
+
+body {
+	font-size: 16px;
+} 
+
+* {
+	box-sizing: border-box;
+	font-family: 'Open Sans', arial, sans-serif;
+}
+
+/*image responsive*/
+img {
+	max-width: 100%;
+}
+
+/*header style*/
+.app-header {
+	text-align: center;
+	padding: 30px 10px;
+	background: #060606;
+	color: #fff;
+}
+
+.app-header img {
+	width: 180px;
+}
+
+.app-header h1{
+	margin-bottom: 10px;
+}
+
+/*content style*/
+.content-bg {
+	padding: 30px 10px;
+}
+
+.app-content {
+	max-width: 1140px;
+	margin: 0px auto;
+}
+
+.app-content table {
+	width: 100%;
+	margin-top: 20px;
+	border: 1px solid #dedede;
+	border-radius: 4px;
+	display: flex;
+	flex-direction: column;
+}
+
+.app-content table thead {
+	background: #e7e8ea;
+	border-bottom: 1px solid #dedede;
+	padding: 5px 0px;
+}
+
+.app-content tr{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+.app-content tr:nth-child(2n+2) {
+	background: #f9fafb;
+	border-top: 1px solid #dedede;
+	border-bottom: 1px solid #dedede;
+}
+
+.app-content tr:last-of-type {
+	border-bottom: none;
+}
+
+.app-content td, .app-content th {
+	text-align: left;
+	padding: 5px;		
+	font-size: 0.875em;
+	margin: 4px;
+	border: 1px solid transparent;
+}
+
+td.editable {
+	border: 1px dashed #060606;
+	border-radius: 3px;
+}
+
+.flex-1 {
+	flex: 1;
+}
+
+.flex-2 {
+	flex: 2;
+}
+
+.flex-3 {
+	flex: 3;
+}
+
+.flex-4 {
+	flex: 4;
+}
+
+/*buttons style*/
+.btn, .btn-upload {
+	border:none;
+	text-shadow: none;	
+	line-height: 1;	
+	font-size:1rem;
+	border-radius: 4px;	
+	cursor: pointer;	
+	text-align: center;	
+}
+
+.btn-new, .btn-delete, .btn-edit, .btn-upload {
+	color: #fff;
+	padding: 11px;
+}
+
+.btn-new {
+	background: #2e7d32;
+}
+
+.btn-edit {
+	background: #1565c0;
+}
+
+.btn-delete {
+	background: #c62828;
+}
+
+.btn-upload {
+	background: #000;
+	padding: 8px;
+}
+
+#uploadFile {
+	display: none;
+}
+
+/*Form add new*/
+.popup-visible {
+	display: flex;
+}
+
+.popup-hidden {
+	display: none;
+}
+
+.popup-bg {
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	height: 100vh;
+	background: rgba(0, 0, 0, .8);
+	position: fixed;
+	z-index: 99;
+	overflow: auto;
+}
+
+.popup-box {
+	flex: 1;
+	max-width: 540px;
+	margin: 10px;
+	background: #fff;
+	box-shadow: 1px 3px 10px 2px rgba(255,255,255,.2);
+}
+
+.popup-header {
+	border-bottom: 1px solid #dedede;
+}
+
+.popup-header h2 {
+	padding: 15px;
+	font-size: 1.125em;
+}
+
+.popup-form {
+	padding: 15px 10px;
+}
+
+.popup-form fieldset {
+	border: none;
+	padding: 5px; 
+}
+
+.text-align-r {
+	text-align: right;
+}
+
+.popup-form label {
+	font-size: 0.8125em;
+	font-weight: bold;
+	color: #5d616b;
+}
+
+.popup-form sup {
+	color: #dd3434;
+}
+
+.popup-form input, .popup-form select{
+	display: block;
+	width: 100%;
+	border: 1px solid #dedede;
+	background: transparent;
+	padding: 10px;
+	border-radius: 3px;	
+}
