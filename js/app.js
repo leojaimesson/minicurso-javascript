@@ -17,7 +17,6 @@ function addEvent(selector, event, callback) {
 	});
 }
 
-
 /********************Popup********************/
 function popup(id) {
 	let sectionPopup = qs(id)
@@ -33,8 +32,30 @@ function popup(id) {
 	}
 }
 
-
 /********************Crud********************/
+
+function add(e) {
+	e.preventDefault();
+	let form = e.target;
+	let nome = qs("#nome").value;
+	let email = qs("#email").value;
+	let idade = qs("#idade").value;
+	let genero = qs("#genero").value;
+
+	qs('tbody').innerHTML += `<tr>
+		<td class="flex-3 nome" contenteditable="false">${nome}</td>
+		<td class="flex-4 email" contenteditable="false">${email}</td>
+		<td class="flex-1 idade" contenteditable="false">${idade}</td>
+		<td class="flex-1 genero" contenteditable="false">${genero}</td>
+		<td class="flex-2">
+			<button class="btn btn-edit" onclick="edit(this)">Editar</button>
+			<button class="btn btn-delete" onclick="remove(this)">Excluir</button>
+		</td>
+	</tr>`
+
+	popup("#popup").close();
+}
+
 function remove(node) {
 	let tbody = node.parentNode.parentNode.parentNode;
 	let tr = node.parentNode.parentNode;
@@ -120,3 +141,5 @@ addEvent('#popup', 'click', function (event) {
 		popup("#popup").close();
 	}
 });
+
+addEvent('form', 'submit', add);
