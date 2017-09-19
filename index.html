@@ -2,7 +2,7 @@
 <html lang="pt-br">
 
 <head>
-	<title>VANILLA JS</title>
+	<title>JAVASCRIPT</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
@@ -14,7 +14,7 @@
 	<section class="popup-bg popup-hidden" id="popup">
 		<div class="popup-box">
 			<div class="popup-header">
-				<h2>Add New</h2>
+				<h2>Adicionar Pessoa</h2>
 			</div>
 			<form class="popup-form" method="post">
 				<input type="hidden" name="id" id="id" value="">
@@ -43,25 +43,27 @@
 					</select>
 				</fieldset>
 
-				<fieldset class="text-align-r">
-					<button class="btn btn-delete" id="btn-close">Cancelar</button>
-					<button type="submit" class="btn btn-new">Add</button>
+				<fieldset class="float-r">
+					<button class="btn btn-delete float-l" id="btn-close">Cancelar <img src="img/ic_clear_white_24px.svg" alt="icon close"></button>
+					<button type="submit" class="btn btn-new float-l">Salvar <img src="img/ic_save_white_24px.svg" alt="icon save"></button>
 				</fieldset>
 			</form>
 		</div>
 	</section>
 
 	<header class="app-header">
-		<img src="img/logo.jpg" alt="logo">
-		<h1>Vanilla JS - CRUD</h1>
+		<div class="app-header-content">
+			<h1>Javascript</h1>
+		</div>
+
 	</header>
 
 	<section class="content-bg">
 		<div class="app-content">
-			<button class="btn btn-new" id="btn-open">Add new</button>
-			<label for="uploadFile" class="btn-upload">File upload csv</label>
-			<input id="uploadFile" type="file" onchange="loadUpload(this)"> 
-			
+			<button class="btn btn-new" id="btn-open">Adicionar<img src="img/ic_add_white_24px.svg" alt="icon add"></button>
+			<!-- <label for="uploadFile" class="btn-upload">File upload csv</label>
+				<input id="uploadFile" type="file" onchange="loadUpload(this)">  -->
+
 			<table>
 				<thead>
 					<tr>
@@ -76,10 +78,17 @@
 				<tbody id="tbody-content">
 				</tbody>
 			</table>
+			<img src="img/load.gif" alt="load" id="load" class="load load-visible">
 		</div>
-	</section>
+	</section>	
 
-	<script src="js/app.js"></script>
+	<!-- polyfill -->
+	<script src="app/polyfill/es6-promise.js"></script>
+	<script src="app/polyfill/fetch.js"></script>
+	<!-- lib -->
+	<script src="app/lib/uricomponent/uricomponent.js"></script>
+	<!-- source -->
+	<script src="app/main.js"></script>
 </body>
 
 </html>
