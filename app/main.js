@@ -17,7 +17,7 @@ class Util {
 				<button class="btn btn-edit float-l">Editar</button>
 				<button class="btn btn-delete float-l">Excluir</button>
 			</td>
-		</tr>`;
+		</tr>`; 
 	}
 
 
